@@ -1,0 +1,19 @@
+#include &lt;stdio.h&gt;
+// Rafael Sillas Valente da Costa
+
+int multiplica(int vet[], int n) {
+int mult = 1;
+for (int i = 0; i &lt; n; i++)
+mult *= vet[i];
+return mult;
+}
+int main() {
+int n;
+scanf(&quot;%d&quot;, &amp;n);
+int vet[n];
+for (int i = 0; i &lt; n; i++)
+scanf(&quot;%d&quot;, &amp;vet[i]);
+int resultado = multiplica(vet, n);
+printf(&quot;Multiplicação: %d\n&quot;, resultado);
+return 0;
+}
