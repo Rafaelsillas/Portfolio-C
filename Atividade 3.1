@@ -1,31 +1,31 @@
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 //Rafael Sillas Valente da Costa
-typedef struct { // Define um novo tipo de dado chamado &quot;pessoa&quot;
+typedef struct { // Define um novo tipo de dado chamado "pessoa"
 double peso; // Variável para armazenar o peso
 int idade; // Variável para armazenar a idade
 double altura; // Variável para armazenar a altura
 } pessoa; // Fim da estrutura
 void imprimePessoa(pessoa p) { // Função para mostrar os dados
-printf(&quot;Peso: %.2lf kg. Idade: %d anos. Altura: %.2lf m.\n&quot;, p.peso, p.idade, p.altura); // Mostra os dados
+printf("Peso: %.2lf kg. Idade: %d anos. Altura: %.2lf m.\n", p.peso, p.idade, p.altura); // Mostra os dados
 da pessoa
 }
 void lerPessoa(pessoa *p) { // Função para ler os dados
-printf(&quot;Digite o peso: &quot;); // Solicita ao usuário que digite o peso
-scanf(&quot;%lf&quot;, &amp;p-&gt;peso); // Lê o peso digitado e armazena na variável
-printf(&quot;Digite a idade: &quot;); // Solicita ao usuário que digite a idade
-scanf(&quot;%d&quot;, &amp;p-&gt;idade); // Lê a idade digitada e armazena na variável
-printf(&quot;Digite a altura: &quot;); // Solicita ao usuário que digite a altura
-scanf(&quot;%lf&quot;, &amp;p-&gt;altura); // Lê a altura digitada e armazena na variável
+printf("Digite o peso:"); // Solicita ao usuário que digite o peso
+scanf("%lf", &p->peso); // Lê o peso digitado e armazena na variável
+printf("Digite a idade:"); // Solicita ao usuário que digite a idade
+scanf("%d", &p->idade); // Lê a idade digitada e armazena na variável
+printf("Digite a altura: "); // Solicita ao usuário que digite a altura
+scanf("%lf", &p->altura); // Lê a altura digitada e armazena na variável
 }
 int main() {
 pessoa pessoas[5]; // Declara um vetor de 5 elementos do tipo &quot;pessoa&quot;
 int i; // Variável
-for (i = 0; i &lt; 5; i++) { // Repete 5 vezes para cada pessoa
-printf(&quot;\nDados da pessoa %d:\n&quot;, i + 1); // Imprime o número da pessoa
-lerPessoa(&amp;pessoas[i]); // Chama a função para ler os dados da pessoa atual
+for (i = 0; i < 5; i++) { // Repete 5 vezes para cada pessoa
+printf("\nDados da pessoa %d:\n", i + 1); // Imprime o número da pessoa
+lerPessoa(&pessoas[i]); // Chama a função para ler os dados da pessoa atual
 }
-printf(&quot;\nDados das pessoas:\n&quot;); // Imprime cabeçalho
-for (i = 0; i &lt; 5; i++) { // Repete 5 vezes para cada pessoa
+printf("\nDados das pessoas:\n"); // Imprime cabeçalho
+for (i = 0; i < 5; i++) { // Repete 5 vezes para cada pessoa
 imprimePessoa(pessoas[i]); // Chama a função para imprimir os dados da pessoa atual
 }
 return 0; // Terminar programa
