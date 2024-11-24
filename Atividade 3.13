@@ -1,0 +1,13 @@
+#include <stdio.h>
+// Rafael Sillas Valente da Costa
+float calcularMedia(int num1, int num2, int num3);
+int main() {
+int a, b, c;
+scanf("%d %d %d", &a, &b, &c);
+float media = calcularMedia(a, b, c);
+printf("A média é: %.2f\n", media);
+return 0;
+}
+float calcularMedia(int num1, int num2, int num3) {
+return (float)(num1 + num2 + num3) / 3;
+}
