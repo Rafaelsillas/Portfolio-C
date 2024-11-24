@@ -1,4 +1,4 @@
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 // Rafael Sillas Valente da Costa
 
 float calcular_media(float n1, float n2, float n3, float n4) {
@@ -7,15 +7,15 @@ return media;
 }
 int main() {
 float n1, n2, n3, n4, media;
-printf(&quot;Digite as notas: &quot;);
-scanf(&quot;%f %f %f %f&quot;, &amp;n1, &amp;n2, &amp;n3, &amp;n4 );
+printf("Digite as notas: ");
+scanf("%f %f %f %f", &n1, &n2, &n3, &n4 );
 
 media = calcular_media(n1, n2, n3, n4);
-printf(&quot;A média do aluno é: %.2f\n&quot;, media);
-if (media &gt;= 7) {
-printf(&quot;O aluno foi aprovado!\n&quot;);
+printf("A média do aluno é: %.2f\n", media);
+if (media >= 7) {
+printf("O aluno foi aprovado!\n");
 } else {
-printf(&quot;O aluno foi reprovado.\n&quot;);
+printf("O aluno foi reprovado.\n");
 }
 return 0;
 }
