@@ -1,0 +1,29 @@
+#include &lt;stdio.h&gt;
+// RAFAEL SILLAS VALENTE DA COSTA
+int primo(int num);
+int somaPrimos(int n);
+int main() {
+int n;
+printf(&quot;Digite o valor de N: &quot;);
+scanf(&quot;%d&quot;, &amp;n);
+printf(&quot;A soma dos primeiros %d números primos é: %d\n&quot;, n, somaPrimos(n));
+return 0;
+}
+int primo(int num) {
+if (num &lt; 2) return 0;
+for (int i = 2; i * i &lt;= num; i++) {
+if (num % i == 0) return 0;
+}
+return 1;
+}
+int somaPrimos(int n) {
+int count = 0, num = 2, soma = 0;
+while (count &lt; n) {
+if (primo(num)) {
+soma += num;
+count++;
+}
+num++;
+}
+return soma;
+}
