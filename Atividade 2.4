@@ -1,0 +1,23 @@
+#include &lt;stdio.h&gt;
+// RAFAEL SILLAS VALENTE DA COSTA
+int somaVetor(int vetor[], int tamanho);
+int main() {
+int vetor[3];
+printf(&quot;Digite três números inteiros:\n&quot;);
+
+for (int i = 0; i &lt; 3; i++) {
+printf(&quot;Número %d: &quot;, i + 1);
+scanf(&quot;%d&quot;, &amp;vetor[i]);
+}
+
+int resultado = somaVetor(vetor, 3);
+printf(&quot;A soma dos valores é: %d\n&quot;, resultado);
+return 0;
+}
+int somaVetor(int vetor[], int tamanho) {
+int soma = 0;
+for (int i = 0; i &lt; tamanho; i++) {
+soma += vetor[i];
+}
+return soma;
+}
