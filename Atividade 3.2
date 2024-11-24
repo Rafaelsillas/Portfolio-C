@@ -1,6 +1,6 @@
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-#include &lt;locale.h&gt;
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
 //Rafael Sillas Valente da Costa
 // Define uma estrutura chamada carro
 typedef struct {
@@ -10,24 +10,24 @@ double preco; // Armazena o preço
 } Carro;
 // Função para modificar o preço de um carro
 void modificarPreco(Carro *c, double novoPreco) {
-c-&gt;preco = novoPreco; // Atribui o novo preço ao carro
+c->preco = novoPreco; // Atribui o novo preço ao carro
 }
 // Função para mostrar os dados de um carro
 void imprimirCarro(Carro *c) {
-printf(&quot;Modelo: %s\n&quot;, c-&gt;modelo); // Mostra o modelo do carro
-printf(&quot;Ano: %d\n&quot;, c-&gt;ano); // Mostra o ano do carro
-printf(&quot;Preço: R$ %.2lf\n&quot;, c-&gt;preco); // Mostra o preço do carro formatado
+printf("Modelo: %s\n", c->modelo); // Mostra o modelo do carro
+printf("Ano: %d\n", c->ano); // Mosra o ano do carr
+printf("Preço: R$ %.2lf\n", c->preco); // Mostra o preço do carro formatado
 }
 int main() {
-setlocale(LC_ALL, &quot;Portuguese&quot;); // Configura para português
-Carro carrol; // Cria uma variável do tipo Carro chamada carrol
-strcpy(carrol.modelo, &quot;XYZ&quot;); // Atribui o modelo &quot;XYZ&quot; ao carro carrol
-carrol.ano = 2020; // Atribui o ano 2020 ao carro carrol
+setlocale(LC_ALL, "Portuguese"); // Configura para português
+Carro carrol; // Cria uma variáveldo tipo Caro chamada carrol
+strcpy(carrol.modelo, "XYZ"); // Atribui o modelo "XYZ" ao carro carrol
+carrol.ano = 2020; // Atribui o ano 200 a carro carro
 carrol.preco = 90000.00; // Atribui o preço 90000.00 ao carro carrol
-printf(&quot;Dados antes da modificação:\n&quot;); // Mostra um cabeçalho
-imprimirCarro(&amp;carrol); // Chama a função para mostrar os dados do carro
-modificarPreco(&amp;carrol, 115000.00); // Modifica o preço do carro para 115000.00
-printf(&quot;\nDados após a modificação do preço:\n&quot;); // Mostra um cabeçalho
-imprimirCarro(&amp;carrol); // Chama a função para mostrar os dados do carro atualizados
+printf("Dados antes da modificação:\n"); // Mostra um cabeçalho
+imprimirCarro(&carrl); // Chama a função para motrar os dados do carro
+modificarPreco(&carrol, 115000.00); // Modifica o preço do carro para 115000.00
+printf("\nDados após a modificação do preço:\n"); // Mostra um cabeçalho
+imprimirCarro(&arrol); // Chama a função para mostrar os dados do carro atualizados
 return 0; // Fim do programa
 }
