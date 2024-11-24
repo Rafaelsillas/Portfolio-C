@@ -1,30 +1,30 @@
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 // RAFAEL SILLAS VALENTE DA COSTA
 float mediaTurma(int numAlunos);
 float mediaEscola(int numTurmas);
 int main() {
 int numTurmas;
-printf(&quot;Digite o número de turmas: &quot;);
-scanf(&quot;%d&quot;, &amp;numTurmas);
-printf(&quot;A média geral da escola é: %.2f\n&quot;, mediaEscola(numTurmas));
+printf("Digite o número de turmas:");
+scanf("%d", &numTurmas);
+printf("A média geral da escola é: %.2f\n", mediaEscola(numTurmas));
 return 0;
 }
 float mediaTurma(int numAlunos) {
 float soma = 0;
-for (int i = 0; i &lt; numAlunos; i++) {
+for (int i = 0; i < numAlunos; i++) {
 float nota;
-printf(&quot;Digite a nota do aluno %d: &quot;, i + 1);
-scanf(&quot;%f&quot;, &amp;nota);
+printf("Digite a nota do aluno %d:", i + 1);
+scanf("%f", &nota);
 soma += nota;
 }
 return soma / numAlunos;
 }
 float mediaEscola(int numTurmas) {
 float somaMedia = 0;
-for (int i = 0; i &lt; numTurmas; i++) {
+for (int i = 0; i < numTurmas; i++) {
 int numAlunos;
-printf(&quot;Digite o número de alunos na turma %d: &quot;, i + 1);
-scanf(&quot;%d&quot;, &amp;numAlunos);
+printf("Digite o número de alunos na turma %d:", i + 1);
+scanf("%d", &numAlunos);
 somaMedia += mediaTurma(numAlunos);
 }
 return somaMedia / numTurmas;
