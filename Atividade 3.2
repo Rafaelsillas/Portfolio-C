@@ -1,0 +1,33 @@
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;locale.h&gt;
+//Rafael Sillas Valente da Costa
+// Define uma estrutura chamada carro
+typedef struct {
+char modelo[50]; // Armazena o modelo do carro (limite de 50 caracteres)
+int ano; // Armazena o ano de fabricação
+double preco; // Armazena o preço
+} Carro;
+// Função para modificar o preço de um carro
+void modificarPreco(Carro *c, double novoPreco) {
+c-&gt;preco = novoPreco; // Atribui o novo preço ao carro
+}
+// Função para mostrar os dados de um carro
+void imprimirCarro(Carro *c) {
+printf(&quot;Modelo: %s\n&quot;, c-&gt;modelo); // Mostra o modelo do carro
+printf(&quot;Ano: %d\n&quot;, c-&gt;ano); // Mostra o ano do carro
+printf(&quot;Preço: R$ %.2lf\n&quot;, c-&gt;preco); // Mostra o preço do carro formatado
+}
+int main() {
+setlocale(LC_ALL, &quot;Portuguese&quot;); // Configura para português
+Carro carrol; // Cria uma variável do tipo Carro chamada carrol
+strcpy(carrol.modelo, &quot;XYZ&quot;); // Atribui o modelo &quot;XYZ&quot; ao carro carrol
+carrol.ano = 2020; // Atribui o ano 2020 ao carro carrol
+carrol.preco = 90000.00; // Atribui o preço 90000.00 ao carro carrol
+printf(&quot;Dados antes da modificação:\n&quot;); // Mostra um cabeçalho
+imprimirCarro(&amp;carrol); // Chama a função para mostrar os dados do carro
+modificarPreco(&amp;carrol, 115000.00); // Modifica o preço do carro para 115000.00
+printf(&quot;\nDados após a modificação do preço:\n&quot;); // Mostra um cabeçalho
+imprimirCarro(&amp;carrol); // Chama a função para mostrar os dados do carro atualizados
+return 0; // Fim do programa
+}
