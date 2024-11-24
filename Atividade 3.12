@@ -1,0 +1,20 @@
+#include <stdio.h>
+// Rafael Sillas Valente da Costa
+
+void Inverso(int vetor[], int tamanho) {
+for (int i = tamanho - 1; i &gt;= 0; i--) {
+printf("%d", vetor[i]);
+}
+printf("\n");
+}
+int main() {
+int vetor[10];
+int tamanho = 10;
+printf("Digite 10 números:\n");
+for (int i = 0; i < tamanho; i++) {
+scanf("%d", &vetor[i]);
+}
+printf("Números na ordem inversa:\n");
+Inverso(vetor, tamanho);
+return 0;
+}
