@@ -1,0 +1,23 @@
+#include &lt;stdio.h&gt;
+// Rafael Sillas Valente da Costa
+
+int soma(int vet[], int n) {
+int s = 0;
+for (int i = 0; i &lt; n; i++) s += vet[i];
+return s;
+}
+int main() {
+int n, s;
+float m;
+printf(&quot;Digite a quantidade de numeros: &quot;);
+scanf(&quot;%d&quot;, &amp;n);
+int vet[n];
+for (int i = 0; i &lt; n; i++) {
+printf(&quot;Digite o numero %d: &quot;, i+1);
+scanf(&quot;%d&quot;, &amp;vet[i]);
+}
+s = soma(vet, n);
+m = (float)s / n;
+printf(&quot;Soma: %d\nMedia: %.2f\n&quot;, s, m);
+return 0;
+}
