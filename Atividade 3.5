@@ -1,17 +1,17 @@
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 // Rafael Sillas Valente da Costa
 
 void impares(int n);
 int main() {
 int num;
-printf(&quot;Digite um número: &quot;);
-scanf(&quot;%d&quot;, &amp;num);
+printf("Digite um número: ");
+scanf("%d", &num);
 impares(num);
 return 0;
 }
 void impares(int n) {
-for (int i = 1; i &lt;= n; i += 2) {
+for (int i = 1; i <= n; i += 2) {
 if (i % 7 != 0) {
-printf(&quot;%d &quot;, i); }
+printf("%d ", i); }
 }
 }
