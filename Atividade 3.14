@@ -1,0 +1,17 @@
+#include <stdio.h>
+// Rafael Sillas Valente da Costa
+
+int calcularResultado(int soma, int primeiro, int ultimo) {
+return soma + (primeiro * 5) + (ultimo * 2);
+}
+
+int main() {
+int vetor[10], soma = 0, i;
+for (i = 0; i < 10; i++) {
+vetor[i] = i + 1;
+soma += vetor[i];
+}
+int resultado = calcularResultado(soma, vetor[0], vetor[9]);
+printf("Resultado: %d\n", resultado);
+return 0;
+}
