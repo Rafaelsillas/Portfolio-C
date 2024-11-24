@@ -1,0 +1,21 @@
+#include &lt;stdio.h&gt;
+// Rafael Sillas Valente da Costa
+
+float calcular_media(float n1, float n2, float n3, float n4) {
+float media = (n1 + n2 + n3 + n4) / 4;
+return media;
+}
+int main() {
+float n1, n2, n3, n4, media;
+printf(&quot;Digite as notas: &quot;);
+scanf(&quot;%f %f %f %f&quot;, &amp;n1, &amp;n2, &amp;n3, &amp;n4 );
+
+media = calcular_media(n1, n2, n3, n4);
+printf(&quot;A média do aluno é: %.2f\n&quot;, media);
+if (media &gt;= 7) {
+printf(&quot;O aluno foi aprovado!\n&quot;);
+} else {
+printf(&quot;O aluno foi reprovado.\n&quot;);
+}
+return 0;
+}
