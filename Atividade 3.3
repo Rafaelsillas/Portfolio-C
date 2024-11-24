@@ -1,19 +1,19 @@
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 //Rafael Sillas Valente da Costa
 
 int calcularResultado(int v[], int n); // Declara uma função chamada calcularResultado
 int main() {
 int vetor[5], i, resultado; // Declara variáveis
-for (i = 0; i &lt; 5; i++) { // Loop para inicializar os elementos do vetor
+for (i = 0; i < 5; i++) { // Loop para inicializar os elementos do vetor
 vetor[i] = i * 2; // Cada elemento do vetor recebe o dobro do seu índice
 }
 resultado = calcularResultado(vetor, 5); // Chama a função para calcular a soma e armazena o resultado
-printf(&quot;O resultado é: %d\n&quot;, resultado); // Imprime o resultado na tela
+printf("O resultado é: %d\n", resultado); // Imprime o resultado na tela
 return 0; // Fim do programa
 }
 int calcularResultado(int v[], int n) {
 int i, soma = 0; // Declaração de variáveis
-for (i = 0; i &lt; n; i++) { // Loop para percorrer todos os elementos do vetor
+for (i = 0; i < n; i++) { // Loop para percorrer todos os elementos do vetor
 soma += v[i]; // Acumula o valor de cada elemento na variável soma
 }
 return soma; // Retorna a soma dos elementos
