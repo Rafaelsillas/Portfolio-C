@@ -1,10 +1,10 @@
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 // Rafael Sillas Valente da Costa
 
 int maior(int vet[], int n) {
 int maior = vet[0], pos = 0;
-for (int i = 1; i &lt; n; i++)
-if (vet[i] &gt; maior) {
+for (int i = 1; i < n; i++)
+if (vet[i] > maior) {
 maior = vet[i];
 pos = i;
 }
@@ -12,11 +12,11 @@ return pos;
 }
 int main() {
 int n;
-scanf(&quot;%d&quot;, &amp;n);
+scanf("%d", &n);
 int vet[n];
-for (int i = 0; i &lt; n; i++)
-scanf(&quot;%d&quot;, &amp;vet[i]);
+for (int i = 0; i < n; i++)
+scanf("%d", &vet[i]);
 int pos = maior(vet, n);
-printf(&quot;Maior: %d, Posicao: %d\n&quot;, vet[pos], pos);
+printf("Maior: %d, Posicao: %d\n", vet[pos], pos);
 return 0;
 }
